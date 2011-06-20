@@ -15,3 +15,17 @@
  
   Original: Vitrum.Zhu (vitrum.cn@gmail.com)
 */
+// remap jQuery to $
+(function($){
+
+ 
+
+
+
+
+
+ 
+
+
+
+})(window.jQuery);
