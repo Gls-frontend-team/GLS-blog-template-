@@ -18,7 +18,11 @@
 // remap jQuery to $
 (function($){
 
- 
+	$('#container').isotope({
+	  // options
+	  itemSelector : '.item',
+	  layoutMode : 'fitRows'
+	});
 
 
 
