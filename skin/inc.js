@@ -18,10 +18,11 @@
 // remap jQuery to $
 (function($){
 
-	$('#container').isotope({
+	$('.container').isotope({
 	  // options
-	  itemSelector : '.item',
-	  layoutMode : 'fitRows'
+	   masonry : {
+	    columnWidth : 320
+	  }
 	});
 
 

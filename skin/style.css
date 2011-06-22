@@ -164,37 +164,49 @@ a:link {-webkit-tap-highlight-color: #fcd700;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
-
-
-
-
-
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {
 
-
-
 }
-
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
-
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
-
-
 }
 
 @media all and (orientation: portrait) {
-
 }
 
 @media all and (orientation: landscape) {
-
 }
 
 /*
 
 */
+/*temp*/
+.content { width: 960px; height: auto; margin: 10px auto;     
+	border: 5px solid white;
+    position:relative;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.80);
+    padding:5px 0 5px 8px;
+    }
+.event { width: 310px; height: 210px; display: inline-block; background: #abc; margin: 5px 0 5px;}
+.size1 { width: 630px; background: #4bc}
+.size2 { height: 430px; background: #a344fc;}
+
+.container { margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
