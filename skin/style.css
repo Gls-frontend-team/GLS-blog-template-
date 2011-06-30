@@ -46,11 +46,11 @@ article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. 
 img,
 object,
 embed {max-width: 100%;}
-
+*/
 /* force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
 
@@ -186,17 +186,19 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 
 */
 /*temp*/
-.content { width: 940px; height: auto; margin: 10px auto 30px;     
+.content { width: 930px; height: auto; margin: 10px auto 30px;
+    padding: 5px 0 5px 8px;    
 	border: 5px solid white;
     position:relative;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
     -webkit-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
-    padding:5px 0 5px 8px;
+
     }
-.event { width: 310px; height: 210px; display: inline-block; background: #abc; margin: 0;}
-.size1 { width: 620px; background: #4bc}
-.size2 { height: 420px; background: #a344fc;}
+.event { width: 300px; height: 200px; display: inline-block;  margin: 0; overflow: hidden; margin: 5px 0 5px 0;}
+.event .img { margin: 0 auto; background:#ddd url(images/load.gif) center center no-repeat; min-width: 300px; min-height: 200px;}
+.size1 { width: 610px; }
+.size2 { height: 410px; }
 
 .container { margin: 0 auto;}
 

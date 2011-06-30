@@ -17,15 +17,17 @@
 */
 // remap jQuery to $
 (function($){
-
+	$("img").lazyload();
+	
 	$('.container').isotope({
 	  // options
 	   masonry : {
-	    columnWidth : 310
+	    columnWidth : 310,
+	    columnHeight : 210
 	  }
 	});
 
-
+	
 
 
 
