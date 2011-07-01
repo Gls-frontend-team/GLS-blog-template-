@@ -186,8 +186,8 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 
 */
 /*temp*/
-.content { width: 930px; height: auto; margin: 10px auto 30px;
-    padding: 5px 0 5px 8px;    
+.content { width: 950px; height: auto; margin: 10px auto 30px;
+    padding: 5px 0 5px 5px;    
 	border: 5px solid white;
     position:relative;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
@@ -195,10 +195,10 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
     -webkit-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
 
     }
-.event { width: 300px; height: 200px; display: inline-block;  margin: 0; overflow: hidden; margin: 5px 0 5px 0;}
+.event { width: 310px; height: 210px; display: inline-block;  margin: 0; overflow: hidden; margin: 0 0 5px 0;}
 .event .img { margin: 0 auto; background:#ddd url(images/load.gif) center center no-repeat; min-width: 300px; min-height: 200px;}
-.size1 { width: 610px; }
-.size2 { height: 410px; }
+.size1 { width: 625px; }
+.size2 { height: 425px; }
 
 .container { margin: 0 auto;}
 

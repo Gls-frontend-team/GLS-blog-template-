@@ -22,8 +22,8 @@
 	$('.container').isotope({
 	  // options
 	   masonry : {
-	    columnWidth : 310,
-	    columnHeight : 210
+	    columnWidth : 315,
+	    columnHeight : 215
 	  }
 	});
 
