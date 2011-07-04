@@ -68,7 +68,7 @@ html {overflow-y: scroll;}
 
 /* we use a lot of ULs that aren't bulleted. 
 	don't forget to restore the bullets within content. */
-ul {list-style: none;}
+ul,ol {list-style: none;}
 
 blockquote, q {quotes: none;}
 
@@ -284,7 +284,7 @@ ol.commentlist li.thread-odd {}
 
     }
 .event { width: 310px; height: 210px; display: inline-block;  margin: 0; overflow: hidden; margin: 0 0 5px 0;}
-.event .img { margin: 0 auto; background:#ddd url(images/load.gif) center center no-repeat; min-width: 300px; min-height: 200px;}
+.img { margin: 0 auto; background:url(images/load.gif) center center no-repeat; min-width: 300px; min-height: 200px;}
 .size1 { width: 625px; }
 .size2 { height: 425px; }
 
@@ -295,7 +295,7 @@ ol.commentlist li.thread-odd {}
 #page {width:100%; margin: 0 auto; min-height: 500px;}
 #branding { width:960px; margin: 0 auto;}
 #wrap {width:960px; margin: 0 auto;}
-#main {float: left;    overflow: hidden;    width: 70%;}
+#main {float: left; width: 70%;}
 #tertiary {    float: right;    overflow: hidden;    width: 28%;}
 
 
@@ -303,8 +303,8 @@ ol.commentlist li.thread-odd {}
 #content {}
 
 #content .category .category_header li { width: auto; display: inline-block;}
-.category .article { float: left; width: 166px; height: 230px; overflow: hidden;}
-.category .article .entry-details .entry-shoot { display: none;}
+.category .article { float: left; width: 166px; height: 230px; }
+.category .article .entry-details { display: none;}
 .category .article .entry-header .entry-shoot-small { width: 145px; height:98px; overflow: hidden;
 	margin: 4px;
 	border: 5px solid white;
@@ -315,14 +315,20 @@ ol.commentlist li.thread-odd {}
 }
 
 
-.category .article:first-of-type { width: 100%; height:340px; }
-.category .article:first-of-type .entry-shoot { width: 625px; height: 210px; display: block; overflow: hidden;
-    margin:10px;   
-	border: 5px solid white;
+.category .article:first-of-type { width: 100%; height:340px; position: relative; }
+.category .article:first-of-type .entry-details {width: 625px; height: 210px; display: block; overflow: hidden;
+    margin:10px 10px 10px 0;   
+	border: 10px solid white;
     position:relative;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
-    -webkit-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
-}
+    -webkit-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);}
+
+.article .entry-details .catergory_title ,.article .entry-details .entry-title ,.article .entry-details .entry-video {
+	position: absolute;
+	left:20px; width: auto; line-height: 13px; padding: 2px 6px; background: #fff; opacity: 0.9; }
+.article .entry-details .catergory_title { top: 144px }
+.article .entry-details .entry-title {top: 161px; line-height: 15px; font-size: 15px; }
+.article .entry-details .entry-video {top: 180px;}
 .category .article:first-of-type .entry-shoot a { width: 625px; height: 210px; display: block; float: left;}
 .category .article:first-of-type .entry-content .entry-shoot-small { display: none;}
