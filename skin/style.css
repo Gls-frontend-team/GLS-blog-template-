@@ -18,8 +18,17 @@
   Original: Vitrum.Zhu (vitrum.cn@gmail.com)
 */
 
+/*   
+Theme Name: The HTML5 Reset Theme
+Theme URI: http://html5reset.org
+Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
+Author: Monkey Do!
+Author URI: http://monkeydo.biz
+Version: 1
+*/
+
 /*
-	HTML5 Reset :: style.css
+	HTML5 Reset Wordpress Theme :: style.css
 	----------------------------------------------------------
 	We have learned much from/been inspired by/taken code where offered from:
 	
@@ -27,12 +36,15 @@
 	HTML5 Doctor				:: http://html5doctor.com
 	and the HTML5 Boilerplate	:: http://html5boilerplate.com
 	
+	Special thanks: The Wordpress theme owes its start to an empty theme authored 
+		by Chris Coyier & Jeff Starr: http://digwp.com
+	
 -------------------------------------------------------------------------------*/
 
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -45,18 +57,18 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
 /* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. 
-img,
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
+   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+/*img,*/
 object,
 embed {max-width: 100%;}
-*/
+
 /* force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
 
 /* we use a lot of ULs that aren't bulleted. 
 	don't forget to restore the bullets within content. */
-ul,ol{list-style: none;}
+ul {list-style: none;}
 
 blockquote, q {quotes: none;}
 
@@ -144,7 +156,7 @@ button {width: auto; overflow: visible;}
 -------------------------------------------------------------------------------*/
 
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
-body {font: 12px Helmet, Freesans, sans-serif;}
+body {font: 13px Helmet, Freesans, sans-serif;}
 
 /* using local fonts? make sure to read up on Paul Irish's 
 	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
@@ -164,24 +176,100 @@ a:link {-webkit-tap-highlight-color: #fcd700;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+
+/* And here begins the Wordpress fun.
+-------------------------------------------------------------------------------*/
+
+#page-wrap {width: 960px; margin: 20px auto;}
+
+.post {}
+
+.entry-content {}
+.entry-content a {}
+.entry-content a:hover {}
+
+#meta {}
+.postmetadata {}
+
+#sidebar {}
+
+.navgation {}
+.next-posts {}
+.prev-posts {}
+
+#searchform {}
+#s {}
+#searchsubmt {}
+	
+ol.commentlist {list-style: none;}
+ol.commentlist li {}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard {}
+ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
+ol.commentlist li.comment div.vcard cite.fn a.url {}
+ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
+ol.commentlist li.comment div.vcard img.avatar-32 {}
+ol.commentlist li.comment div.vcard img.photo {}
+ol.commentlist li.comment div.vcard span.says {}
+ol.commentlist li.comment div.commentmetadata {}
+ol.commentlist li.comment div.comment-meta {font-size: 10px;}
+ol.commentlist li.comment div.comment-meta a {color: #ccc;}
+ol.commentlist li.comment p {}
+ol.commentlist li.comment ul {}
+ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply a {font-weight: bold;}
+ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-5 {}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even {background: #fff;}
+ol.commentlist li.odd {background: #f6f6f6;}
+ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.thread-alt {}
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {
 
+
+
 }
+
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
+
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
+	
+		
 }
 
 @media all and (orientation: portrait) {
+	
 }
 
 @media all and (orientation: landscape) {
+	
 }
-
 /*
 
 */
@@ -206,12 +294,35 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /*pager box*/
 #page {width:100%; margin: 0 auto; min-height: 500px;}
 #branding { width:960px; margin: 0 auto;}
-#main {width:960px; margin: 0 auto;}
+#wrap {width:960px; margin: 0 auto;}
+#main {float: left;    overflow: hidden;    width: 70%;}
+#tertiary {    float: right;    overflow: hidden;    width: 28%;}
 
 
 
+#content {}
+
+#content .category .category_header li { width: auto; display: inline-block;}
+.category .article { float: left; width: 166px; height: 230px; overflow: hidden;}
+.category .article .entry-details .entry-shoot { display: none;}
+.category .article .entry-header .entry-shoot-small { width: 145px; height:98px; overflow: hidden;
+	margin: 4px;
+	border: 5px solid white;
+    position:relative;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.30);
+}
 
 
-
-
-
+.category .article:first-of-type { width: 100%; height:340px; }
+.category .article:first-of-type .entry-shoot { width: 625px; height: 210px; display: block; overflow: hidden;
+    margin:10px;   
+	border: 5px solid white;
+    position:relative;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.30);
+}
+.category .article:first-of-type .entry-shoot a { width: 625px; height: 210px; display: block; float: left;}
+.category .article:first-of-type .entry-content .entry-shoot-small { display: none;}
